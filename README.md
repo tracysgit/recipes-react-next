@@ -14,6 +14,7 @@
 - Remove head OG tags
 - List, category, or card selection for recipes
 - Tab focus
+- Dark Mode
 
 ## Features
 
@@ -24,6 +25,7 @@
 ## Installation
 
 - Node.js 18.17.0 or later is required (check with "node -v").
+- To run dev: "npm install" then "npm run dev"
 - Postgres: "npm i @vercel/postgres" and "npm run seed"
 - Debounce: "npm i use-debounce"
 - Authentication: "npm install next-auth@beta" 

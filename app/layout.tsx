@@ -24,7 +24,8 @@ export default function RootLayout({
       {/* <body className={`${inter.className} antialiased`}>{children}</body> */}
       <body>
         <Header></Header>
-        <main className="flex min-h-screen flex-col">{children}</main>
+        {/* <main className="flex min-h-screen flex-col">{children}</main> */}
+        <main className="flex flex-col p-4 md:p-8">{children}</main>
         <footer>Footer</footer>
       </body>
     </html>

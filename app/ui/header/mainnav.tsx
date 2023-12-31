@@ -22,7 +22,7 @@ export function MainNav() {
   return (
     <nav className="main-nav" aria-label="Main Menu">
       <ul className={`flex flex-row flex-wrap justify-start`}>
-        {categories.map(function (category) {
+        {categories.map(function (category, index) {
           let attributes = {
             href: '/' + (category === 'All' ? '' : category.toLowerCase()),
             className:
@@ -33,7 +33,7 @@ export function MainNav() {
           };
 
           return (
-            <li key={category}>
+            <li key={index}>
               <Link {...attributes}>{category === '' ? 'All' : category}</Link>
             </li>
           );
