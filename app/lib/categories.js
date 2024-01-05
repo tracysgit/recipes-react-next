@@ -1,9 +1,9 @@
 const categories = [
-  'Entree',
-  'Appetizer',
-  'Soup',
-  'Salad',
-  'Side',
-  'Dessert',
-  'Drink',
+  'Entrees',
+  'Appetizers',
+  'Soups',
+  'Salads',
+  'Sides',
+  'Desserts',
+  'Drinks',
 ];

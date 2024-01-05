@@ -1,5 +1,13 @@
 {
-  "categories": ["Main Dish", "Appetizer", "Soup", "Salad", "Side Dish", "Dessert", "Drink"],
+  "categories": [
+    "Entrees",
+    "Appetizers",
+    "Soups",
+    "Salads",
+    "Sides",
+    "Desserts",
+    "Drinks"
+  ],
   "recipes": [
     {
       "name": "Sables",

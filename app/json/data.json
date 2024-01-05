@@ -1,0 +1,68 @@
+{
+  "categories": [
+    "entrees",
+    "appetizers",
+    "soups",
+    "salads",
+    "sides",
+    "desserts",
+    "drinks"
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Sables",
+      "category": "desserts",
+      "tags": [
+        "cookie",
+        "punition",
+        "butter",
+        "sweet"
+      ],
+      "ingredients": [
+        "140 gm unsalted butter, room temperature",
+        "125 gm white sugar",
+        "1 large egg, room temperature",
+        "2 c. all-purpose flour"
+      ],
+      "directions": "<p>Cream the butter and sugar until thoroughly blended. Add the egg and stir until the mixture is smooth and satiny. Add the flour all at once and mix until the dough forms clumps and curds and looks like coarse meal. Form the dough into discs. Cover and refrigerate until firm.</p><p>Roll out the dough to 1/8&quot; thickness. Cut the cookies with a fluted, 4cm circular cookie cutter.</p><p>Bake at 350&#8457; for approximately 8-12 minutes or the preferred level of brownness.",
+      "source": "Poil&acirc;ne Bakery",
+      "image": "cookies_sable",
+      "servings": "60 cookies"
+    },{
+      "id": 2,
+      "name": "Anise Cookies",
+      "category": "desserts",
+      "tags": [
+        "cookie",
+        "anise",
+        "butter",
+        "sweet"
+      ],
+      "ingredients": [
+        "4 c. flour",
+        "1 t. baking powder",
+        "1 t. baking soda",
+        "2 sticks butter",
+        "2 eggs",
+        "2 T. milk",
+        "2 c. sugar",
+        "1/2 t. anise oil or 3-4 t. anise extract"
+      ],
+      "directions": "<p>Preheat oven to 350&#8457;.</p><p>Combine dry ingredients. Combine remaining ingredients in a separate bowl. Combine all ingredients and mix.</p><p>Divide dough into two balls and refrigerate. Roll out dough to 1/8 in. thick. Bake at 350&#8457; for approximately 5 minutes.</p>",
+      "source": "Grandma Krebs",
+      "image": "cookies_anise",
+      "servings": "50 cookies"
+    },{
+      "id": 3,
+      "name": "Orange Julius",
+      "category": "drinks",
+      "tags": ["smoothie", "orange"],
+      "ingredients": ["1 c. milk", "2 t. vanilla", "1 6-oz can frozen orange juice concentrate", "1/2 c. sugar", "1-1/2 c. ice"],
+      "directions": "<p>Blend the milk and vanilla in a blender. Add the frozen orange juice concentrate. Blend until fully combined with the milk. Add the sugar and ice cubes, and blend until cubes are crushed and mixture has thickened. If things end up a little thick, just add a tablespoon of water and mix once again.</p>",
+      "source": "",
+      "image": "",
+      "servings": "2"
+  }
+  ]
+}

@@ -26,6 +26,7 @@
 
 - Node.js 18.17.0 or later is required (check with "node -v").
 - To run dev: "npm install" then "npm run dev"
+- Install SWR for local data: "npm i swr"
 - Postgres: "npm i @vercel/postgres" and "npm run seed"
 - Debounce: "npm i use-debounce"
 - Authentication: "npm install next-auth@beta" 

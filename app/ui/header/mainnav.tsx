@@ -2,39 +2,43 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-// import clsx from 'clsx';
-// import categories from '@/app/lib/categories';
-
-const categories = [
-  '',
-  'Entree',
-  'Side',
-  'Appetizer',
-  'Soup',
-  'Salad',
-  'Dessert',
-  'Drink',
-];
+import data from '@/app/json/data.json';
+import { capitalizeFirstLetter } from '@/app/lib/utils';
 
 export function MainNav() {
+  const categories = data.categories;
   const pathname = usePathname();
 
   return (
     <nav className="main-nav" aria-label="Main Menu">
       <ul className={`flex flex-row flex-wrap justify-start`}>
+        <li>
+          {pathname === '/' ? (
+            <a
+              className="active m-1 p-2 hover:underline"
+              aria-current="page"
+              href="/"
+            >
+              All
+            </a>
+          ) : (
+            <a className="m-1 p-2 hover:underline" href="/">
+              All
+            </a>
+          )}
+        </li>
         {categories.map(function (category, index) {
           let attributes = {
-            href: '/' + (category === 'All' ? '' : category.toLowerCase()),
+            href: '/' + category,
             className:
               'm-1 p-2 hover:underline' +
-              (pathname === '/' + category.toLowerCase() ? ' active' : ''),
-            'aria-current':
-              pathname === '/' + category.toLowerCase() ? 'page' : undefined,
+              (pathname === '/' + category ? ' active' : ''),
+            'aria-current': pathname === '/' + category ? 'page' : undefined,
           };
 
           return (
             <li key={index}>
-              <Link {...attributes}>{category === '' ? 'All' : category}</Link>
+              <Link {...attributes}>{capitalizeFirstLetter(category)}</Link>
             </li>
           );
         })}
