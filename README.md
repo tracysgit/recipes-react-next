@@ -6,6 +6,7 @@
 - Search bar
 - Footer w/ JS date
 - Card index
+- Components for different card types
 - Recipe pages
 - JSON data and then DB
 - Editable recipes

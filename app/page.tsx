@@ -32,19 +32,13 @@ export default async function Page() {
                 id={`deck__title-${category.toLowerCase()}`}
                 className="bg-blue-100 px-4 py-2 text-2xl text-blue-800 dark:bg-gray-800 dark:text-blue-400"
               >
-                {/* <h2
-                id={`deck__title-${category.toLowerCase()}`}
-                className="py-2 text-2xl text-blue-800 underline dark:bg-gray-800 dark:text-blue-400"
-              > */}
                 <Link href={category.toLowerCase()} className="">
                   {capitalizeFirstLetter(category)}
                 </Link>
               </h2>
               <ul className="deck--grid-card-image-upper mb-10 mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {/* {recipes.map((recipe) => { */}
                 {recipes
                   .filter((recipe) =>
-                    // el.name.toLowerCase().includes(category.toLowerCase()),
                     recipe.category
                       .toLowerCase()
                       .includes(category.toLowerCase()),
@@ -53,7 +47,7 @@ export default async function Page() {
                     return (
                       <li
                         key={recipe.id}
-                        className="deck__card h-auto max-w-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800"
+                        className="deck__card h-auto max-w-full overflow-hidden rounded-lg border border-gray-300 bg-white shadow hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800"
                       >
                         <Link href={`/recipes/${recipe.id}`}>
                           <Image
