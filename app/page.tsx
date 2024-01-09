@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { CardImageTop } from '@/app/ui/cards/cardImageTop';
 import { getCategories, getRecipes } from '@/app/lib/localdata';
 import { capitalizeFirstLetter } from '@/app/lib/utils';
 
@@ -43,50 +44,15 @@ export default async function Page() {
                       .toLowerCase()
                       .includes(category.toLowerCase()),
                   )
-                  .map((recipe) => {
+                  .map((recipe, index) => {
                     return (
-                      <li
-                        key={recipe.id}
-                        className="deck__card h-auto max-w-full overflow-hidden rounded-lg border border-gray-300 bg-white shadow hover:border-gray-400 dark:border-gray-700 dark:bg-gray-800"
-                      >
-                        <Link href={`/recipes/${recipe.id}`}>
-                          <Image
-                            src={
-                              '/images/' +
-                              (recipe.image
-                                ? recipe.image
-                                : 'image_placeholder') +
-                              '.webp'
-                            }
-                            width={400}
-                            height={250}
-                            className="card__image w-full"
-                            alt={recipe.image ? 'Image of ' + recipe.name : ''}
-                            style={{
-                              objectFit: 'cover',
-                              height: '150px',
-                            }}
-                          />
-                          <div className="card__body flex flex-col justify-between px-4 py-4">
-                            <h3 className="card__title mb-0 text-xl text-gray-900 dark:text-white">
-                              {recipe.name}
-                            </h3>
-                            {/* <p className="card__copy mb-3 font-normal text-gray-700 dark:text-gray-400"></p> */}
-                            {/* <div className="card__tags pb-1 pt-3">
-                            {recipe.tags.map((tag, index) => {
-                              return (
-                                <span
-                                  key={index}
-                                  className="mb-1 mr-2 mt-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
-                                >
-                                  #{tag}
-                                </span>
-                              );
-                            })}
-                          </div> */}
-                          </div>
-                        </Link>
-                      </li>
+                      <>
+                        <CardImageTop
+                          key={recipe.id}
+                          className=""
+                          card={recipe}
+                        ></CardImageTop>
+                      </>
                     );
                   })}
               </ul>
@@ -97,52 +63,6 @@ export default async function Page() {
     </>
   );
 }
-
-// {categories.map((category) => {
-//   return (
-//     <div
-//       key={category}
-//       className="card__set mb-6 rounded border border-gray-200 font-medium text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:focus:ring-gray-800"
-//     >
-//       <h2 className="rounded-t border-b border-gray-200 bg-blue-50 p-4 text-2xl text-blue-800 dark:bg-gray-800 dark:text-blue-400">
-//         <Link href={category.toLowerCase()} className="">
-//           {category}
-//         </Link>
-//       </h2>
-//       <div className="card__deck flex flex-row flex-wrap gap-4 p-4">
-//         <div className="flex flex-row justify-between gap-4">
-//           <div className="card__full max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-//             <a href="/">
-//               <Image
-//                 src="/images/cookie_sables.webp"
-//                 width={400}
-//                 height={250}
-//                 className="rounded-t-lg"
-//                 alt="Image of this recipe"
-//                 style={{
-//                   width: '100%',
-//                   height: 'auto',
-//                 }}
-//               />
-//               <div className="p-5">
-//                 <h3 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-//                   Noteworthy technology acquisitions 2021
-//                 </h3>
-//                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-//                   Here are the biggest enterprise technology acquisitions
-//                   of 2021 so far, in reverse chronological order.
-//                 </p>
-//               </div>
-//             </a>
-//           </div>
-//           <div>Card2</div>
-//           <div>Card3</div>
-//           <div>Card4</div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// })}
 
 {
   /* <button
